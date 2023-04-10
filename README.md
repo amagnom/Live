@@ -41,7 +41,7 @@ Obs: Também foi utilizada algumas bibliotecas externas como:
 
 ## Padrões
 
-Foi utilizado o design pattern estrutural MVC. Além disto, para o banco de dados utilizou o modelo Code First.
+Foi utilizado o design pattern estrutural **MVC**. Além disto, para o banco de dados utilizou o modelo **Code First**.
 
 Vale ressaltar que também havia a possibilidade de se utilizar o Factory como criacional e o Strategy como comportamental.
 Devido ao pouco tempo de desenvolvimento, estas alterações ficaram como modificações futuras.
