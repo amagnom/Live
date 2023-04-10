@@ -58,4 +58,4 @@ Devido ao pouco tempo de desenvolvimento, estas alterações ficaram como modifi
 
 
 ## Print do projeto
-![Print do projeto](https://github.com/ArildoMagno/SponteLive/blob/main/ImagesRepository/HomePage.png)
+![Print do projeto](https://github.com/ArildoMagno/SponteLive/blob/main/ImagesRepository/InstrutoresPage.png)
