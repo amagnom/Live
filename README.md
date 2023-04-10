@@ -7,7 +7,7 @@ Este é um projeto de desenvolvimento de uma plataforma de lives, incluindo algu
 outras.
 
 ### Pontos de destaque
-- Os pontos abaixos são valiidados e verificados pelo sistema.
+#### Os pontos abaixos são valiidados e verificados pelo sistema.
 
 - Inscritos e Instrutores devem ser maiores de 18 anos.
 - Uma Live só pode ser agendada para uma data maior que a atual.
