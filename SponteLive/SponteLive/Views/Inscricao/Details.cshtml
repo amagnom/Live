@@ -1,0 +1,83 @@
+﻿@model SponteLive.Models.Inscricao
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<hr />
+
+
+<section class="content-header">
+    <h1>
+        Informações
+    </h1>
+</section>
+
+<section class="content container-fluid">
+
+    <div class="box box-info">
+
+
+        <div class="box-body">
+
+
+
+
+            <div class="row">
+                <div class="col-sm-2">
+                    <strong>@Html.DisplayNameFor(model => model.Inscrito.Nome) do Inscrito</strong>
+                </div>
+                <div class="col-sm-10">
+                    @Html.DisplayFor(model => model.Inscrito.Nome)
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-sm-2">
+                    <strong>@Html.DisplayNameFor(model => model.DataVencimento)</strong>
+                </div>
+                <div class="col-sm-10">
+                    @Html.DisplayFor(model => model.DataVencimento)
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-2">
+                    <strong>@Html.DisplayNameFor(model => model.Valor)</strong>
+                </div>
+                <div class="col-sm-10">
+                    @Html.DisplayFor(model => model.Valor)
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2">
+                    <strong>@Html.DisplayNameFor(model => model.StatusPagamento)</strong>
+                </div>
+                <div class="col-sm-10">
+                    @if (Model.StatusPagamento)
+                    {
+                        <span>Sim</span>
+                    }
+                    else
+                    {
+                        <span>Não</span>
+                    }
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="box-footer">
+            <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+        </div>
+
+
+    </div>
+</section>

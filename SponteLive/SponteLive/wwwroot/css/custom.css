@@ -1,0 +1,30 @@
+﻿.btn-custom {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-custom:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.no-hover-effect:hover {
+    background-color: transparent;
+    color: inherit;
+}
+
+.logo-image {
+    width: 60%;
+}
+
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+}
+
+canvas#mainChart {
+    display: block;
+    margin: 0 auto;
+}

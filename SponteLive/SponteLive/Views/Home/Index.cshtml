@@ -1,0 +1,41 @@
+﻿<section class="content-header">
+    <canvas id="mainChart" style="display:block; margin:auto; width:100%; max-width:700px;"></canvas>
+</section>
+
+
+<section class="content container-fluid"> </section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+
+
+<script>
+    fetch('/Home/GetAmountChart')
+        .then(response => response.json())
+        .then(data => {
+            const mainChart = new Chart("mainChart", {
+                type: "bar",
+                data: {
+                    labels: ["Lives", "Instrutores", "Inscritos", "Inscrições"],
+                    datasets: [{
+                        label: 'Quantidades',
+                        data: data,
+                        backgroundColor: ["#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd"],
+                        hoverBackgroundColor: ["#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd"],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
+                    }
+                }
+            });
+        });
+</script>

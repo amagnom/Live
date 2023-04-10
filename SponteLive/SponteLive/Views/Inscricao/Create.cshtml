@@ -1,0 +1,99 @@
+﻿@model SponteLive.Models.Inscricao
+
+@{
+    ViewData["Title"] = "Nova Inscrição";
+}
+
+
+<hr />
+
+
+<section class="content-header">
+    <h1>
+        Cadastro
+    </h1>
+</section>
+
+
+<section class="content container-fluid">
+
+    <div class="box box-info">
+        <form asp-action="Create" class="form-horizontal">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <label for="LiveId" class="col-sm-2 control-label">Live</label>
+                <div class="col-sm-10">
+
+                    <select asp-for="LiveId" class="form-control" required>
+                        <option value="">-- Selecione uma Live --</option>
+                        @foreach (var live in (List<Live>)ViewData["Lives"])
+                        {
+                            <option value="@live.Id">@live.Nome</option>
+                        }
+                    </select>
+
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="InscritoId" class="col-sm-2 control-label">Inscrito</label>
+                <div class="col-sm-10">
+
+                    <select asp-for="InscritoId" class="form-control" required>
+                        <option value="">-- Selecione um inscrito --</option>
+                        @foreach (var inscrito in (List<Inscrito>)ViewData["Inscritos"])
+                        {
+                            <option value="@inscrito.Id">@inscrito.Nome</option>
+                        }
+                    </select>
+
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="Valor" class="col-sm-2 control-label">Valor</label>
+                <div class="col-sm-10">
+                    <textarea asp-for="Valor" class="form-control"></textarea>
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <label for="DataVencimento" class="col-sm-2 control-label">Data de Vencimento</label>
+                <div class="col-sm-10">
+                    <input asp-for="DataVencimento" type="datetime-local" class="form-control" id="DataVencimento" name="DataVencimento" />
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="StatusPagamento" class="col-sm-2 control-label">Status Pagamento</label>
+                <div class="col-sm-10">
+                    <select asp-for="StatusPagamento" class="form-control">
+                        <option value="false">Não</option>
+                        <option value="true">Sim</option>
+                    </select>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="box-footer">
+                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+                <button type="submit" class="btn btn-info pull-right">Criar</button>
+            </div>
+
+
+        </form>
+    </div>
+
+</section>

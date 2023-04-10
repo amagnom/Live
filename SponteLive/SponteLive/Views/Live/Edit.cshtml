@@ -1,0 +1,106 @@
+﻿@model SponteLive.Models.Live
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<hr />
+
+
+
+<section class="content-header">
+    <h1>
+        Editar
+    </h1>
+</section>
+
+<section class="content container-fluid">
+
+    <div class="box box-info">
+
+
+        <form asp-action="Edit" class="form-horizontal">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="box-body">
+
+
+
+                <div class="form-group">
+                    <label for="Nome" class="col-sm-2 control-label">Nome</label>
+                    <div class="col-sm-10">
+                        <input asp-for="Nome" type="text" class="form-control" name="Nome" placeholder="Live da alegria" class="form-control" />
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="Descricao" class="col-sm-2 control-label">Descrição</label>
+                    <div class="col-sm-10">
+                        <textarea asp-for="Descricao" class="form-control"></textarea>
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <label for="Instrutor" class="col-sm-2 control-label">Instrutor</label>
+                    <div class="col-sm-10">
+
+                        <select asp-for="InstrutorId" class="form-control" required>
+                            <option value="">-- Selecione um instrutor --</option>
+                            @foreach (var instrutor in (List<Instrutor>)ViewData["Instrutores"])
+                            {
+                                <option value="@instrutor.Id">@instrutor.Nome</option>
+                            }
+                        </select>
+
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="DataHoraInicio" class="col-sm-2 control-label">Data e Hora de Inicio</label>
+                    <div class="col-sm-10">
+                        <input asp-for="DataHoraInicio" type="datetime-local" class="form-control" name="DataHoraInicio" />
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="ValorInscricao" class="col-sm-2 control-label">Valor da Inscrição</label>
+                    <div class="col-sm-10">
+                        <textarea asp-for="ValorInscricao" class="form-control"></textarea>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+
+            <div class="box-footer">
+                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+                <button type="submit" class="btn btn-info pull-right">Salvar</button>
+            </div>
+
+
+        </form>
+    </div>
+
+</section>
+
+
+
+
+@section scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+

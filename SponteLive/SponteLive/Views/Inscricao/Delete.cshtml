@@ -1,0 +1,41 @@
+﻿@model SponteLive.Models.Inscricao
+
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<section class="content-header">
+    <h1>
+        Excluir
+    </h1>
+</section>
+
+<section class="content container-fluid">
+    <form asp-action="Delete">
+
+        <div class="box box-info">
+
+            <div class="box-body">
+
+
+                <h3>Você tem certeza que deseja excluir a inscricao "@Model.Id"?</h3>
+                <p>Todas as informações relacionadas a esta inscricao serão apagadas permanentemente.</p>
+
+
+
+                <div class="box-footer">
+                    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+                    <button type="submit" class="btn btn-danger pull-right">Deletar</button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </form>
+
+</section>
