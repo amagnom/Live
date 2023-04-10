@@ -6,7 +6,16 @@
 
 Este é um projeto de desenvolvimento de uma plataforma de lives, incluindo alguns objetos e suas operações, tais como criação, deleção dentre
 outras.
-Realizando diversas verificações dos campos, como por exemplo
+
+### Pontos de destaque
+- Inscritos e Instrutores devem ser maiores de 18 anos.
+- Uma Live só pode ser agendada para uma data maior que a atual.
+- Os campos de url do Instagram e do Email são validados.
+- Não é permitido criar ou editar algum dado e adicionar um email ou instagram que já exista.
+- Não é possível deletar um Instrutor se houver uma live marcada com ele.
+- Não é possível deletar um Inscrito ou uma Live se caso houver uma Inscrição marcada com eles.
+
+obs: Com poucas exceções, as validações são feitas no backend por motivos de segurança.
 
 ## Tecnologias utilizadas
 
