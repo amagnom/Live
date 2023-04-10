@@ -1,6 +1,5 @@
-﻿# Nome do Projeto
+﻿# SponteLive
 
-[!(https://github.com/ArildoMagno/SponteLive)
 
 ## Descrição
 
