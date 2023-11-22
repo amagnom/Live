@@ -1,4 +1,4 @@
-﻿# SponteLive
+﻿# Live
 
 
 ## Descrição
@@ -67,4 +67,4 @@ Até outros, como o Interface. Porém, devido ao pouco tempo de desenvolvimento,
 obs: Caso não tenha o ef instalado, execute: dotnet tool install --global dotnet-ef
 
 ## Print do projeto
-![Print do projeto](https://github.com/ArildoMagno/SponteLive/blob/main/ImagesRepository/InstrutoresPage.png)
+![Print do projeto](https://github.com/amagnom/SponteLive/blob/main/Pic1.PNG)
