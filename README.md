@@ -66,5 +66,5 @@ Até outros, como o Interface. Porém, devido ao pouco tempo de desenvolvimento,
 
 obs: Caso não tenha o ef instalado, execute: dotnet tool install --global dotnet-ef
 
-## Print do projeto
+## Imagem do projeto
 ![Print do projeto](https://github.com/amagnom/SponteLive/blob/main/Pic1.PNG)
